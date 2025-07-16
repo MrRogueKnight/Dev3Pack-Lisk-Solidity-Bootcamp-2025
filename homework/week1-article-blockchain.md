@@ -30,7 +30,6 @@ A **blockchain** is a decentralized, distributed ledger that records transaction
 ## 🧱 Block + Chain: How It Works
 
 A blockchain is made up of blocks, each containing:
-
 - 📄 A list of transactions
 - 🕒 A timestamp
 - 🔗 A reference (hash) to the previous block
@@ -39,12 +38,12 @@ Blocks are linked together, forming a chain. If one block is tampered with, the 
 
 ```mermaid
 flowchart LR
-    A[Block 1] --> B[Block 2]
+    A[Block 1]
+    B[Block 2]
+    A --> B
     A -->|Transactions| TX
     A -->|Timestamp| TS
     A -->|Prev Hash| PH
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 > 🧩 **Visual:** Each block is like a page in a diary, and the hash is a secret code linking each page to the next.
