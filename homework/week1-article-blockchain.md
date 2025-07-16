@@ -387,3 +387,115 @@ Blockchain is transforming the way we handle trust, transparency, and digital ow
 - **MEV (Maximal Extractable Value):** The maximum value that can be extracted from block production by including, excluding, or reordering transactions within a block.
 
 ---
+
+## 🌳 Merkle Tree: Efficient Transaction Verification
+
+A **Merkle Tree** allows blockchains to efficiently and securely verify large sets of transactions. Each transaction is hashed, then pairs of hashes are combined and hashed again, up to a single Merkle root.
+
+```mermaid
+graph TD
+    T1[Tx 1] --> H1[Hash 1]
+    T2[Tx 2] --> H2[Hash 2]
+    T3[Tx 3] --> H3[Hash 3]
+    T4[Tx 4] --> H4[Hash 4]
+    H1 --> H12[Hash 1-2]
+    H2 --> H12
+    H3 --> H34[Hash 3-4]
+    H4 --> H34
+    H12 --> Root[Merkle Root]
+    H34 --> Root
+```
+
+> 🌲 **Visual:** Like combining branches up to a single trunk—the Merkle root summarizes all transactions!
+
+---
+
+## 🔺 The Blockchain Trilemma (Visual)
+
+Blockchains must balance three properties: Decentralization, Security, and Scalability. Most can only optimize for two at a time.
+
+```mermaid
+flowchart TD
+    A[Decentralization]
+    B[Security]
+    C[Scalability]
+    A --+-- B
+    B --+-- C
+    C --+-- A
+    subgraph Examples
+      D1[Bitcoin: Decentralization + Security]
+      D2[Solana: Security + Scalability]
+      D3[Experimental: Decentralization + Scalability]
+    end
+    A -.-> D1
+    B -.-> D1
+    B -.-> D2
+    C -.-> D2
+    C -.-> D3
+    A -.-> D3
+```
+
+> 🔺 **Visual:** The trilemma triangle—pick any two, but not all three!
+
+---
+
+## ⚡ Proof of Work vs. Proof of Stake (Visual)
+
+**Proof of Work (PoW):**
+
+```mermaid
+flowchart TD
+    Miner[Miners] -->|Solve puzzles| Block[Block Created]
+    Block --> Chain[Blockchain]
+```
+
+**Proof of Stake (PoS):**
+
+```mermaid
+flowchart TD
+    Validator[Validators] -->|Stake coins| Selection[Random Selection]
+    Selection --> Block2[Block Created]
+    Block2 --> Chain2[Blockchain]
+```
+
+> ⚡ **Visual:** PoW = work for rewards; PoS = stake for a chance to validate!
+
+---
+
+## 💸 MEV: Maximal Extractable Value (Visual)
+
+MEV occurs when a sequencer or validator can reorder transactions for profit.
+
+```mermaid
+flowchart TD
+    User1[User 1 Tx]
+    User2[User 2 Tx]
+    User3[User 3 Tx]
+    Sequencer[Sequencer/Validator]
+    User1 --> Sequencer
+    User2 --> Sequencer
+    User3 --> Sequencer
+    Sequencer -->|Reorders for profit| BlockMEV[Block with MEV]
+    BlockMEV --> BlockchainMEV[Blockchain]
+```
+
+> 💸 **Visual:** Sequencers can profit by reordering transactions—MEV risk!
+
+---
+
+## 🧅 Layered Security Model (Visual)
+
+Blockchain security is layered: protocol, consensus, smart contracts, and user practices all matter.
+
+```mermaid
+flowchart TD
+    User[User Security]
+    Contract[Smart Contract Security]
+    Consensus[Consensus Security]
+    Protocol[Protocol Security]
+    User --> Contract
+    Contract --> Consensus
+    Consensus --> Protocol
+```
+
+> 🧅 **Visual:** Like layers of an onion—each layer adds protection!
