@@ -64,7 +64,17 @@ Blockchain uses **asymmetric cryptography**:
 
 📌 *You can share your public key, but never your private key.*
 
-*Diagram: [Crypto Keys](https://miro.medium.com/v2/resize:fit:828/format:webp/1*d7dTrNxQnEG3Xw7QpD1hbw.png)*
+```mermaid
+flowchart LR
+    PubKey[Public Key] --> Blockchain
+    PrivKey[Private Key] --> Blockchain
+    PrivKey -.-> You
+    PubKey -.-> Others
+    Blockchain -->|Receive funds| PubKey
+    Blockchain -->|Sign tx| PrivKey
+    You -.->|Never share!| PrivKey
+    Others -.->|Can be shared| PubKey
+```
 
 ---
 
