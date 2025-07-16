@@ -31,17 +31,25 @@ Think of it like a **digital notebook** shared with the world. Every time someon
 ### 🔗 Visual: Blockchain as a Chain of Blocks
 
 ```mermaid
-graph LR
-  A[Block 1] --> B[Block 2]
-  B --> C[Block 3]
-  C --> D[Block 4]
-  style A fill:#f9f,stroke:#333,stroke-width:2px
-  style B fill:#bbf,stroke:#333,stroke-width:2px
-  style C fill:#bfb,stroke:#333,stroke-width:2px
-  style D fill:#ffb,stroke:#333,stroke-width:2px
+flowchart LR
+    A[Block 1]
+    B[Block 2]
+    C[Block 3]
+    D[Block 4]
+    A -- Hash --> B
+    B -- Hash --> C
+    C -- Hash --> D
+    subgraph BlockDetails[Block Structure]
+        TX[Transactions]
+        TS[Timestamp]
+        Prev[Prev Hash]
+    end
+    A --- BlockDetails
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#ffb,stroke:#333,stroke-width:2px
 ```
-
-*Example Image: [Block and Chain Structure](https://miro.medium.com/v2/resize:fit:1000/1*0tGJkVtLzYl6DTW_GoJZWw.png)*
 
 ---
 
@@ -134,17 +142,17 @@ flowchart TD
 
 ## 🌐 Layers in Blockchain
 
-| Layer      | Description                                 | Examples                |
-|------------|---------------------------------------------|-------------------------|
-| **Layer 1**| Base chain, main network                    | Ethereum, Bitcoin       |
-| **Layer 2**| Scales L1, bundles transactions, uses L1 security | Lisk, Celo, Base (OP Stack) |
-| **Layer 3**| For high-performance apps (e.g., games)     | Starknet/Madara         |
-
-- **Superchain Ecosystem:** Lisk, Celo, Base (built on OP Stack)
-- **Rollup Comparison:** [L2Beat](https://l2beat.com/scaling/summary)
-- **Appchains Example:** [madara.build](https://www.madara.build/)
-
-*Image: [Blockchain Layers (L1, L2, L3)](https://miro.medium.com/v2/resize:fit:1400/1*dP1J7y1-8uY_bKw-L4xQvQ.png)*
+```mermaid
+flowchart TD
+    L1[Layer 1: Main Blockchain]
+    L2[Layer 2: Scaling Solutions]
+    L3[Layer 3: App Chains]
+    L3 --> L2
+    L2 --> L1
+    style L1 fill:#bbf,stroke:#333,stroke-width:2px
+    style L2 fill:#bfb,stroke:#333,stroke-width:2px
+    style L3 fill:#ffb,stroke:#333,stroke-width:2px
+```
 
 ---
 
