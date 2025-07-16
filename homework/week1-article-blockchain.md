@@ -415,25 +415,20 @@ graph TD
 Blockchains must balance three properties: Decentralization, Security, and Scalability. Most can only optimize for two at a time.
 
 ```mermaid
-flowchart TD
+graph TD
     A[Decentralization]
     B[Security]
     C[Scalability]
-    A --+-- B
-    B --+-- C
-    C --+-- A
-    subgraph Examples
-      D1[Bitcoin: Decentralization + Security]
-      D2[Solana: Security + Scalability]
-      D3[Experimental: Decentralization + Scalability]
-    end
-    A -.-> D1
-    B -.-> D1
-    B -.-> D2
-    C -.-> D2
-    C -.-> D3
-    A -.-> D3
+    A --> B
+    B --> C
+    C --> A
 ```
+
+*Examples:*
+
+- **Bitcoin:** Decentralization + Security
+- **Solana:** Security + Scalability
+- **Experimental chains:** Decentralization + Scalability
 
 > 🔺 **Visual:** The trilemma triangle—pick any two, but not all three!
 
