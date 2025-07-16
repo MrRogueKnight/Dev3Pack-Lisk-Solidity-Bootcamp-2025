@@ -4,7 +4,7 @@
 
 ## 📘 Introduction
 
-Blockchain is one of the most revolutionary technologies of the 21st century, powering innovations like Bitcoin, Ethereum, NFTs, and the entire Web3 movement. But what exactly is a blockchain, and why is it so important? This article breaks down blockchain in simple terms, with visuals, analogies, and practical examples for absolute beginners.
+Blockchain is reshaping digital trust and ownership, enabling innovations like Bitcoin, Ethereum, and Web3. But what exactly is a blockchain, and why is it so important? This article breaks down blockchain in simple terms, with visuals, analogies, and practical examples for absolute beginners.
 
 > **TL;DR:** Blockchain = digital trust, transparency, and ownership. Let’s make it fun!
 
@@ -39,23 +39,12 @@ Blocks are linked together, forming a chain. If one block is tampered with, the 
 
 ```mermaid
 flowchart LR
-    A[Block 1]
-    B[Block 2]
-    C[Block 3]
-    D[Block 4]
-    A -- Hash --> B
-    B -- Hash --> C
-    C -- Hash --> D
-    subgraph BlockDetails[Block Structure]
-        TX[Transactions]
-        TS[Timestamp]
-        Prev[Prev Hash]
-    end
-    A --- BlockDetails
+    A[Block 1] --> B[Block 2]
+    A -->|Transactions| TX
+    A -->|Timestamp| TS
+    A -->|Prev Hash| PH
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#ffb,stroke:#333,stroke-width:2px
 ```
 
 > 🧩 **Visual:** Each block is like a page in a diary, and the hash is a secret code linking each page to the next.
@@ -134,19 +123,15 @@ Consensus mechanisms are protocols that ensure all nodes agree on the blockchain
 
 ## 🧊 The Blockchain Trilemma
 
-Every blockchain faces a fundamental challenge: it can only optimize for two out of three properties at once:
+Every blockchain faces a fundamental challenge: it can’t optimize for all three properties at once:
 
-- **Decentralization:** Many independent validators participate.
-- **Security:** The network resists attacks and censorship.
-- **Scalability:** High transaction throughput at low cost.
+| Combination                  | Example           | Trade-off            |
+|------------------------------|-------------------|----------------------|
+| Decentralization + Security  | Bitcoin           | Slow, not scalable   |
+| Security + Scalability       | Solana            | Less decentralized   |
+| Decentralization + Scalability | Some experimental chains | Less secure      |
 
-| Property         | Description                                      |
-|------------------|--------------------------------------------------|
-| Decentralization | Many independent validators, no single controller|
-| Security         | Resistant to attacks and censorship              |
-| Scalability      | High throughput, low cost                        |
-
-> ⚠️ **Trilemma:** You can’t have it all! Most blockchains pick two and sacrifice the third.
+> ⚠️ **Trilemma:** You can’t optimize for all three! Most blockchains prioritize two and compromise on the third.
 
 ---
 
@@ -174,7 +159,7 @@ flowchart TD
 
 ---
 
-## 🧰 Rollups Unrolled: Optimistic, ZK, and Cynical Rollups
+## 🧰 Rollups Unrolled: Optimistic, ZK, and Cynical Rollups (ELVES)
 
 Rollups help blockchains scale by bundling many transactions into one, sending a summary to the main chain, and keeping the detailed work off-chain. Think of it like mailing a spreadsheet instead of sending each number one by one.
 
@@ -199,10 +184,11 @@ Rollups help blockchains scale by bundling many transactions into one, sending a
 
 - Use cryptographic proofs (ZK-SNARKs/STARKs) to prove all transactions are valid.
 - Near-instant finality, strong security guarantees.
+- **Analogy:** Like a math teacher checking homework by verifying the answers without seeing the work.
 - **Pros:** Very secure, fast confirmation, great for privacy/high-throughput.
 - **Cons:** Complex to build, proving takes time and powerful hardware.
 
-#### 🤔 Cynical Rollups: "Trust Nothing. Verify Everything."
+#### 🤔 Cynical Rollups (ELVES): "Trust Nothing. Verify Everything."
 
 - Assume everything is wrong unless proven right.
 - Committees check each block; if fraud is found, the submitter is penalized.
@@ -213,7 +199,7 @@ Rollups help blockchains scale by bundling many transactions into one, sending a
 
 ### ⚖️ Side-by-Side Comparison
 
-| Feature           | Optimistic         | ZK-Rollup         | Cynical (ELVES)      |
+| Feature           | Optimistic         | ZK-Rollup         | Cynical Rollups (ELVES)      |
 |-------------------|-------------------|-------------------|----------------------|
 | Validity Method   | Assume valid, check if challenged | Prove validity upfront | Assume invalid, prove valid |
 | Finality          | Delayed (challenge window) | Instant (once proof verified) | Depends on committee result |
@@ -274,6 +260,18 @@ Sequencers are specialized operators that manage L2 transaction flow. They provi
 
 ---
 
+## 🏁 Rollup Maturity: The Three Stages
+
+| Stage | Governance | Proof System | Exit Mechanism | Decentralization Level | Example |
+|-------|------------|--------------|---------------|-----------------------|---------|
+| 0     | Operators & Security Council | Centralized or training-wheels | 7-day exit, operator help | Centralized | Most new rollups |
+| 1     | Smart contracts + council | Decentralized proof submission | Independent user exits | Semi-decentralized | Many established rollups |
+| 2     | Fully smart contract-based | Permissionless proof generation | Fully decentralized, robust exits | Fully decentralized | Target for future |
+
+> 🏆 **Goal:** Most rollups are working toward Stage 2—fully decentralized and permissionless!
+
+---
+
 ## 🧠 What Are Smart Contracts?
 
 A **smart contract** is a self-executing program stored on the blockchain. It runs automatically when conditions are met.
@@ -326,7 +324,7 @@ Yes, but not 100%. Smart contracts need **audits** to avoid vulnerabilities.
 🔍 Tools like **Remix IDE** help test for issues.
 💰 Audits are expensive but necessary—especially for financial apps.
 
-> 🦺 **Safety Tip:** Always double-check smart contract code and never share your private key!
+> 🦺 **Safety Tip:** **<span style="color:red; font-weight:bold">Never share your private key!</span>** Always double-check smart contract code.
 
 ---
 
@@ -339,6 +337,8 @@ Yes, but not 100%. Smart contracts need **audits** to avoid vulnerabilities.
 | [Chainlist](https://chainlist.org)           | Add blockchain networks easily |
 | [L2Beat](https://l2beat.com/scaling/summary) | Compare Layer 2 networks       |
 | [Rekt](https://rekt.news/)                   | List of major DeFi hacks       |
+| [Ethereum Foundation](https://ethereum.org/) | Ethereum official resources    |
+| [Bitcoin.org](https://bitcoin.org/)          | Bitcoin official resources     |
 
 ---
 
@@ -349,7 +349,7 @@ Yes, but not 100%. Smart contracts need **audits** to avoid vulnerabilities.
 - Smart contracts automate agreements and power DeFi, NFTs, and DAOs.
 - Public and private blockchains serve different use cases.
 - Consensus mechanisms keep the network in sync.
-- Rollups are essential for scaling and come in different types (Optimistic, ZK, Cynical).
+- Rollups are essential for scaling and come in different types (Optimistic, ZK, Cynical Rollups (ELVES)).
 - Sequencers and rollup maturity are critical for L2 security and decentralization.
 - Always keep your private key secret!
 
@@ -357,7 +357,7 @@ Yes, but not 100%. Smart contracts need **audits** to avoid vulnerabilities.
 
 ## 📝 Summary
 
-Blockchain is transforming how we think about trust, transparency, and digital ownership. Understanding the trilemma, layering, and rollups is key to navigating the future of Web3.
+Blockchain is transforming the way we handle trust, transparency, and digital ownership. Understanding the trilemma, layering, and rollups is key to navigating the future of Web3.
 
 > 🎉 **You made it!** Whether you’re a developer, designer, or just curious, you’re now ready to explore the world of blockchain with confidence.
 
@@ -375,6 +375,24 @@ Blockchain is transforming how we think about trust, transparency, and digital o
 - **Next.js Learn:** [nextjs.org/learn](https://nextjs.org/learn?authuser=1)
 - **Foundry (Smart Contract Tooling):** [getfoundry.sh](https://getfoundry.sh/?authuser=1)
 - **Wagmi (React Web3 Hooks):** [wagmi.sh](https://wagmi.sh/?authuser=1)
+- **Ethereum Foundation:** [ethereum.org](https://ethereum.org/)
+- **Bitcoin.org:** [bitcoin.org](https://bitcoin.org/)
+
+---
+
+## 📚 Glossary
+
+- **ZK-SNARKs:** Zero-Knowledge Succinct Non-Interactive Argument of Knowledge. A cryptographic proof that allows one party to prove to another that a statement is true, without revealing any information beyond the validity of the statement itself.
+- **Finality:** The point at which a transaction is considered permanent and cannot be reversed.
+- **Sequencer:** An operator in Layer 2 rollups responsible for ordering and batching transactions before submitting them to Layer 1.
+- **Rollup:** A Layer 2 scaling solution that bundles multiple transactions into a single batch for efficiency.
+- **Fraud Proof:** A mechanism in optimistic rollups that allows anyone to challenge the validity of a transaction during the challenge period.
+- **Smart Contract:** A self-executing program on the blockchain that runs when predefined conditions are met.
+- **DAO:** Decentralized Autonomous Organization, a community-led entity with no central authority, governed by smart contracts and token holders.
+- **Challenge Period:** The time window in optimistic rollups during which transactions can be disputed.
+- **Slashing:** The act of penalizing a validator or participant (usually by taking away staked funds) for malicious or incorrect behavior.
+- **L1/L2:** Layer 1 is the base blockchain; Layer 2 is a scaling solution built on top of Layer 1.
+- **Consensus Mechanism:** The protocol by which blockchain nodes agree on the state of the network (e.g., Proof of Work, Proof of Stake).
 
 ---
 
