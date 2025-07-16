@@ -162,7 +162,7 @@ Rollups help blockchains scale by bundling many transactions into one, sending a
 ### Why Do We Need Rollups?
 
 - Blockchains are secure and decentralized, but can be slow and expensive.
-- Rollups = scalability + security ✅
+- Rollups = scalability + security
 
 ### Types of Rollups
 
@@ -314,7 +314,7 @@ Yes, but not 100%. Blockchain ensures data security at the protocol level, but a
 🔍 Tools like **Remix IDE** help test for issues.
 💰 Audits are expensive but necessary—especially for financial apps.
 
-> 🦺 **Safety Tip:** **<span style="color:red; font-weight:bold">Never share your private key!</span>** Always double-check smart contract code.
+🦺 **Safety Tip:** **NEVER share your private key!** Always double-check smart contract code.
 
 ---
 
