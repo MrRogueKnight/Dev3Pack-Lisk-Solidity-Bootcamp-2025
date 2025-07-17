@@ -10,6 +10,7 @@
 ## 📚 Main Resource Hub
 
 - **All Bootcamp Materials, Schedule, and Resources:** [Lisk Summer Bootcamp Notion Page](https://frost-foe-274.notion.site/Lisk-Summer-Bootcamp-Solidity-226b6900a29980aa9ef4f15dd4d83774)
+- **Bootcamp Google Calendar:** [View Calendar](https://calendar.google.com/calendar/u/0?cid=Y18wZWI0ZmM4ZTMzZmFlMDQyZTU0OWZjMGFlMmYyOWFlMDE2MWRhNzk4OWRmN2I5ZjhlNjRlZDU3MGU2MmJkZmU5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)
 
 ---
 
