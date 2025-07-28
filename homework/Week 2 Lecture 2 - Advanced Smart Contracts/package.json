@@ -1,0 +1,29 @@
+{
+  "name": "advanced-smart-contracts-assignment",
+  "version": "1.0.0",
+  "description": "Week 2 Lecture 2 - Advanced Smart Contracts Assignment for Lisk Dev3Pack Summer Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "attack": "hardhat run scripts/attack.js"
+  },
+  "keywords": [
+    "solidity",
+    "smart-contracts",
+    "security",
+    "vulnerabilities",
+    "lisk",
+    "bootcamp"
+  ],
+  "author": "Prashant Ranjan",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+} 
