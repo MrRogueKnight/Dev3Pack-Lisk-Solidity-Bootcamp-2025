@@ -44,17 +44,17 @@
 
 ### High Severity Vulnerabilities
 
-3. **DoS Vulnerability**
+1. **DoS Vulnerability**
    - Issue: Using `transfer()` with 2300 gas limit can cause failures
    - Fix: Use `call()` with proper error handling
 
 ### Medium Severity Vulnerabilities
 
-4. **Lack of Events**
+1. **Lack of Events**
    - Issue: No transparency for state changes
    - Fix: Emit comprehensive events for all important actions
 
-5. **No Input Validation**
+2. **No Input Validation**
    - Issue: No checks for zero values or invalid inputs
    - Fix: Implement thorough input validation
 
