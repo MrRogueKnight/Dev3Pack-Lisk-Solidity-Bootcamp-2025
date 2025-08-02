@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #c73e1d;
+  --primary-hover: #ad2a0e;
+  --secondary-color: #fcf8f5;
+  --text-primary: #260f08;
+  --text-secondary: #87635a;
+  --border-color: #f4edeb;
+  --white: #ffffff;
+  --green: #1ea575;
+  --red: #c73e1d;
+  --font-family: 'Red Hat Text', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
