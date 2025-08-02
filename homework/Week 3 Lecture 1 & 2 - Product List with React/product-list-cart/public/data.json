@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 99.99,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "High-quality wireless headphones with noise cancellation"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 199.99,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Feature-rich smartwatch with health tracking"
+    },
+    {
+      "id": 3,
+      "name": "Laptop Stand",
+      "price": 49.99,
+      "image": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=300&h=300&fit=crop",
+      "category": "Accessories",
+      "description": "Adjustable laptop stand for better ergonomics"
+    },
+    {
+      "id": 4,
+      "name": "Coffee Mug",
+      "price": 19.99,
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop",
+      "category": "Home",
+      "description": "Ceramic coffee mug with thermal insulation"
+    },
+    {
+      "id": 5,
+      "name": "Yoga Mat",
+      "price": 29.99,
+      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=300&h=300&fit=crop",
+      "category": "Fitness",
+      "description": "Non-slip yoga mat for home workouts"
+    },
+    {
+      "id": 6,
+      "name": "Desk Lamp",
+      "price": 39.99,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=300&h=300&fit=crop",
+      "category": "Home",
+      "description": "LED desk lamp with adjustable brightness"
+    }
+  ]
+} 
