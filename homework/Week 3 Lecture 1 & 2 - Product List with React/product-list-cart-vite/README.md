@@ -1,6 +1,6 @@
 # Product List with Cart - React Application
 
-A modern, responsive React application built with Vite that displays a list of dessert products with a functional shopping cart.
+A modern, responsive React application built with Vite that allows users to browse a curated list of dessert products and manage a shopping cart in real time. Designed for educational purposes as part of a React development course, this project demonstrates best practices in React component structure, state management with hooks, and responsive design. Users can add or remove items from the cart, adjust quantities, and experience a clean, mobile-friendly UI with smooth interactions. The app is an ideal starting point for learning about e-commerce interfaces and modern frontend development workflows.
 
 ## Features
 
